@@ -1,20 +1,18 @@
-import Footer from '@/components/shared/Footer'
-import Header from '@/components/shared/Header'
-import { ILayoutProps } from '@/types/props.type'
-import React from 'react'
+import Footer from '@/components/shared/Footer';
+import Header from '@/components/shared/Header';
+import { ILayoutProps } from '@/types/props.type';
+import React from 'react';
 
-function layout({children}:ILayoutProps) {
+function layout({ children }: ILayoutProps) {
   return (
     <>
-    <Header/>
+      <Header />
 
-   {
-     children
-    }
-  
-    <Footer/>
+      {children}
+
+      <Footer />
     </>
-  )
+  );
 }
 
-export default layout
+export default layout;

@@ -1,4 +1,3 @@
-
 import { EPropertyType, ESequence, IAddress } from '@/reuse/type';
 
 interface ILocationAdvantage {

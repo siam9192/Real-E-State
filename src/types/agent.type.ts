@@ -1,5 +1,4 @@
-import { IAddress, IName, IPhone } from "@/reuse/type";
-
+import { IAddress, IName, IPhone } from '@/reuse/type';
 
 export interface IAgentArea {
   city: string;

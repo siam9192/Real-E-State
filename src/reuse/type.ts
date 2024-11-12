@@ -51,3 +51,10 @@ export enum ECurrency {
   USD = 'USD',
   EUR = 'EUR',
 }
+
+export enum EUserRole {
+  MEMBER = 'Member',
+  AGENT = 'Agent',
+  ADMIN = 'Admin',
+  MODERATOR = 'Moderator',
+}
