@@ -26,7 +26,12 @@ const PopularLocations = () => {
       image: 'https://i.ibb.co/Xxsw8jX/miami.jpg',
       properties: 7,
     },
-    { name: 'Houseton', image: '', properties: 200974 },
+    {
+      name: 'Houseton',
+      image:
+        'https://media.istockphoto.com/id/1483998656/photo/houstons-skyline.jpg?s=612x612&w=0&k=20&c=wtNd7Vpm_lcw__O3AXim0TshupqmLVzyXU8H3GpARiU=',
+      properties: 200974,
+    },
     {
       name: 'London',
       image: 'https://i.ibb.co/RSDKd9y/london.webp',

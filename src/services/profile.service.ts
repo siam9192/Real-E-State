@@ -13,7 +13,6 @@ export const getCurrentUser = async () => {
     const { data } = await axiosInstance.get('/profiles/current-user');
     return data.data as IUser;
   } catch (error) {
-    console.log(error);
     return null;
   }
 };

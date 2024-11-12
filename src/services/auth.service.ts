@@ -60,3 +60,13 @@ export const googleCallBack = async (accessToken: string) => {
     return error?.response as IResponse<null>;
   }
 };
+
+export const logout = async () => {
+  try {
+    (await cookies()).delete('accessToken');
+    (await cookies()).delete('refreshToken');
+    return true;
+  } catch (error) {
+    return false;
+  }
+};

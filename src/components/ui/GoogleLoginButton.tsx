@@ -45,7 +45,7 @@ function GoogleLoginButton() {
             src="https://i.ibb.co.com/x1KW6kh/Remove-bg-ai-1726161918623.png"
             alt=""
           />
-          <span>Google</span>
+          <span className="font-semibold">Google</span>
         </button>
       </div>
       {isLoading ? <LoadingModal message="Just a moment..." /> : null}

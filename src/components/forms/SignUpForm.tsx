@@ -60,7 +60,7 @@ const SignUpForm = () => {
         </div>
 
         <div className="flex justify-end mt-3">
-          <h4 className="text-dark_text_medium_color">
+          <h4 className="  text-light_text_medium_color dark:text-dark_text_medium_color">
             Already have an account ?
             <Link href={`/auth/sign-in`} className=" text-primary_color">
               {' '}

@@ -57,7 +57,7 @@ const SignInForm = () => {
         </div>
 
         <div className="flex justify-end mt-3">
-          <h4 className="text-dark_text_medium_color">
+          <h4 className=" text-light_text_medium_color dark:text-dark_text_medium_color">
             Don't have any account ?
             <Link href={`/auth/sign-up`} className=" text-primary_color">
               {' '}
