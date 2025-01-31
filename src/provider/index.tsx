@@ -1,10 +1,10 @@
-'use client';
-import { store } from '@/app/redux/store';
-import envConfig from '@/config/envConfig';
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import React from 'react';
-import * as ReactRedux from 'react-redux';
-import { Toaster } from 'sonner';
+"use client";
+import { store } from "@/app/redux/store";
+import envConfig from "@/config/envConfig";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import React from "react";
+import * as ReactRedux from "react-redux";
+import { Toaster } from "sonner";
 
 type TProvider = {
   children: React.ReactNode;

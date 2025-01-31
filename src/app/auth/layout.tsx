@@ -1,5 +1,5 @@
-import { ILayoutProps } from '@/types/props.type';
-import React from 'react';
+import { ILayoutProps } from "@/types/props.type";
+import React from "react";
 
 function layout({ children }: ILayoutProps) {
   return (

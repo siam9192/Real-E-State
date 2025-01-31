@@ -1,0 +1,3 @@
+interface IAmenity {
+  name: string;
+}

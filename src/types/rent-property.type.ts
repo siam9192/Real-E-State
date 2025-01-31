@@ -1,4 +1,4 @@
-import { EPropertyType, ESequence, IAddress } from '@/reuse/type';
+import { EPropertyType, ESequence, IAddress } from "@/reuse/type";
 
 interface ILocationAdvantage {
   name: string;
@@ -47,19 +47,19 @@ export interface IRentProperty {
 }
 
 export enum EFurnishStatus {
-  FULL_FURNISHED = 'Full Furnished',
-  SEMI_FURNISHED = 'Semi Furnished',
-  NOT_FURNISHED = 'Not Furnished',
+  FULL_FURNISHED = "Full Furnished",
+  SEMI_FURNISHED = "Semi Furnished",
+  NOT_FURNISHED = "Not Furnished",
 }
 
 export enum ERentLeaseTermSequence {
-  MONTH = 'Months',
-  YEAR = 'Years',
-  WEEK = 'Weeks',
+  MONTH = "Months",
+  YEAR = "Years",
+  WEEK = "Weeks",
 }
 
 export enum ERentPropertyAvailableStatus {
-  AVAILABLE = 'Available',
-  RENTED = 'Rented',
-  UNDER_MAINTENANCE = 'Under Maintenance',
+  AVAILABLE = "Available",
+  RENTED = "Rented",
+  UNDER_MAINTENANCE = "Under Maintenance",
 }

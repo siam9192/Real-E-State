@@ -1,4 +1,4 @@
-import { IMember } from './member.type';
+import { IMember } from "./member.type";
 
 export interface ISubscription {
   package: string;
@@ -12,10 +12,10 @@ export interface ISubscription {
 }
 
 export enum ESubscriptionStatus {
-  ACTIVE = 'Active', // Subscription is currently active
-  EXPIRED = 'Expired', // Subscription has expired
-  LIMIT_REACHED = 'LimitReached', // Listing limit has been reached
-  PENDING_RENEWAL = 'PendingRenewal', // Subscription is pending renewal
-  CANCELED = 'Canceled', // Subscription was canceled by the user
-  SUSPENDED = 'Suspended', // Subscription is temporarily on hold
+  ACTIVE = "Active", // Subscription is currently active
+  EXPIRED = "Expired", // Subscription has expired
+  LIMIT_REACHED = "LimitReached", // Listing limit has been reached
+  PENDING_RENEWAL = "PendingRenewal", // Subscription is pending renewal
+  CANCELED = "Canceled", // Subscription was canceled by the user
+  SUSPENDED = "Suspended", // Subscription is temporarily on hold
 }

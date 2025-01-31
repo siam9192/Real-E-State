@@ -1,6 +1,6 @@
-'use client';
-import { ChangeEvent } from 'react';
-import { Controller, useFormContext } from 'react-hook-form';
+"use client";
+import { ChangeEvent } from "react";
+import { Controller, useFormContext } from "react-hook-form";
 
 type TInputProps = {
   type?: string;
@@ -9,6 +9,7 @@ type TInputProps = {
   placeholder?: string;
   className?: string;
   required?: boolean;
+  readonly?: boolean;
 };
 
 const FormInput = ({
@@ -18,6 +19,7 @@ const FormInput = ({
   placeholder,
   className,
   required,
+  readonly,
 }: TInputProps) => {
   const {
     formState: { errors },
@@ -26,7 +28,7 @@ const FormInput = ({
   const error = errors[name]?.message?.toString();
 
   const handle_key_press = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       event.preventDefault(); // Prevent form submission on Enter key press
     }
   };
@@ -48,14 +50,15 @@ const FormInput = ({
             <input
               className={
                 className ||
-                'w-full mt-1 px-2 py-3 rounded-lg bg-gray-100  dark:bg-dark_color  dark:text-slate-100 dark:bg-dark-light dark:border-opacity-35  font-medium outline-primary-color outline-2'
+                "w-full mt-1 px-2 py-3 rounded-lg bg-gray-100  dark:bg-dark_color focus:outline-none focus:border-spacing-2   dark:text-slate-100 dark:bg-dark-light dark:border-opacity-35  font-medium outline-primary-color outline-2"
               }
               {...field}
-              value={field.value || ''}
-              type={type || 'text'}
-              placeholder={placeholder || ''}
+              value={field.value || ""}
+              type={type || "text"}
+              placeholder={placeholder || ""}
               id={name}
               required={required}
+              readOnly={readonly}
               onKeyDown={handle_key_press}
             />
             {error && <p className=" text-red-600 mt-1">{error}</p>}

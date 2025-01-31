@@ -1,4 +1,4 @@
-import { EPropertyType, IAddress } from '@/reuse/type';
+import { EPropertyType, IAddress } from "@/reuse/type";
 
 export interface ILocationAdvantage {
   name: string;

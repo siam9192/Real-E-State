@@ -1,26 +1,26 @@
-'use client';
-import React, { useState } from 'react';
-import FormInput from '../form/FormInput';
-import Form from '../form/Form';
-import Link from 'next/link';
-import errorToast from '../toast/ErrorToast';
-import AuthValidation from '@/validations/auth.validation';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { signUp } from '@/services/auth.service';
-import successToast from '../toast/SuccessToast';
-import LoadingModal from '../loading/LoadingModal';
+"use client";
+import React, { useState } from "react";
+import FormInput from "../form/FormInput";
+import Form from "../form/Form";
+import Link from "next/link";
+import errorToast from "../toast/ErrorToast";
+import AuthValidation from "@/validations/auth.validation";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { signUp } from "@/services/auth.service";
+import successToast from "../toast/SuccessToast";
+import LoadingModal from "../loading/LoadingModal";
 
 const SignUpForm = () => {
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const handelSubmit = async (values: any) => {
-    setError('');
+    setError("");
     setIsLoading(true);
     try {
       if (values.password !== values.confirm_password) {
         throw new Error("Both Password  doesn't match");
       }
-      values.role = 'Member';
+      values.role = "Member";
       const res = await signUp(values);
       if (!res.success) {
         throw new Error(res.message);
@@ -36,10 +36,7 @@ const SignUpForm = () => {
 
   return (
     <div>
-      <Form
-        onSubmit={handelSubmit}
-        resolver={zodResolver(AuthValidation.signUpValidationSchema)}
-      >
+      <Form onSubmit={handelSubmit} resolver={zodResolver(AuthValidation.signUpValidationSchema)}>
         <div className="space-y-5">
           <div className="grid grid-cols-2 gap-5">
             <FormInput name="name.first" label="First Name" />
@@ -54,16 +51,14 @@ const SignUpForm = () => {
           <div>
             <FormInput name="confirm_password" label="Confirm Password" />
           </div>
-          <button className="w-full py-3 bg-primary_color text-white">
-            Sign Up
-          </button>
+          <button className="w-full py-3 bg-primary_color text-white">Sign Up</button>
         </div>
 
         <div className="flex justify-end mt-3">
           <h4 className="  text-light_text_medium_color dark:text-dark_text_medium_color">
             Already have an account ?
             <Link href={`/auth/sign-in`} className=" text-primary_color">
-              {' '}
+              {" "}
               Sign In
             </Link>
           </h4>

@@ -1,6 +1,6 @@
-import { EUserRole } from '@/reuse/type';
-import { IAgent } from './agent.type';
-import { IStaff } from './staff.type';
+import { EUserRole } from "@/reuse/type";
+import { IAgent } from "./agent.type";
+import { IStaff } from "./staff.type";
 
 export interface IUser {
   _id: string;

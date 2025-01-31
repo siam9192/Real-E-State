@@ -1,6 +1,6 @@
-import React from 'react';
-import { LuAlertTriangle } from 'react-icons/lu';
-import { toast, ToasterProps } from 'sonner';
+import React from "react";
+import { LuAlertTriangle } from "react-icons/lu";
+import { toast, ToasterProps } from "sonner";
 
 interface IProps {
   t: any;
@@ -16,9 +16,7 @@ function ErrorToast({ t, message }: IProps) {
       <span className="text-3xl text-warning_color">
         <LuAlertTriangle />
       </span>
-      <span className=" font-medium dark:text-dark_text_medium_color">
-        {message}
-      </span>
+      <span className=" font-medium dark:text-dark_text_medium_color">{message}</span>
     </div>
   );
 }

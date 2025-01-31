@@ -1,4 +1,4 @@
-import { IName } from '@/reuse/type';
+import { IName } from "@/reuse/type";
 
 export interface IStaff {
   user: string;

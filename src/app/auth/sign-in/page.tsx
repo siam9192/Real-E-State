@@ -1,6 +1,6 @@
-import SignInForm from '@/components/forms/SignInForm';
-import GoogleLoginButton from '@/components/ui/GoogleLoginButton';
-import React from 'react';
+import SignInForm from "@/components/forms/SignInForm";
+import GoogleLoginButton from "@/components/ui/GoogleLoginButton";
+import React from "react";
 
 const page = () => {
   return (

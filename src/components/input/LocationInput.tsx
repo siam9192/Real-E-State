@@ -1,5 +1,5 @@
-import React from 'react';
-import { CiLocationOn } from 'react-icons/ci';
+import React from "react";
+import { CiLocationOn } from "react-icons/ci";
 
 function LocationInput() {
   return (

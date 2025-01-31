@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Controller, useFormContext } from 'react-hook-form';
-import { IconType } from 'react-icons';
+"use client";
+import React from "react";
+import { Controller, useFormContext } from "react-hook-form";
+import { IconType } from "react-icons";
 
 type TInputProps = {
   type?: string;
@@ -31,15 +31,13 @@ const FormInputWithIcon = (props: TInputProps) => {
             <div
               className={`flex items-center gap-2 pl-4 px-1 bg-gray-100 dark:bg-dark-light  rounded-md `}
             >
-              <span className="text-2xl font-medium dark:text-white">
-                {<props.icon />}
-              </span>
+              <span className="text-2xl font-medium dark:text-white">{<props.icon />}</span>
               <input
                 {...field}
-                value={field.value || ''}
+                value={field.value || ""}
                 id={name}
-                type={type || 'text'}
-                placeholder={placeholder || ''}
+                type={type || "text"}
+                placeholder={placeholder || ""}
                 className="w-full   border-none outline-none bg-transparent placeholder:font-medium pl-2 py-4 dark:text-white"
               />
             </div>

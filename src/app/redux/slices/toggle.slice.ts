@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 interface IInitialState {}
 
 const initialState: IInitialState = {};
 
 const toggleSlice = createSlice({
-  name: 'toggle',
+  name: "toggle",
   initialState,
   reducers: {},
 });

@@ -1,96 +1,47 @@
-import React from 'react';
-import Container from '../container/Container';
-import Link from 'next/link';
-import { FaApple, FaGooglePlay } from 'react-icons/fa6';
+import React from "react";
+import Container from "../container/Container";
+import footerRoutesData from "@/data/footer-routes.data";
 
 const Footer = () => {
-  const navigations = [' About Us', '  FAQs', ' Contact', ' Blog'];
-  const highlights = [' Apartment', 'My Houses', 'Condos', 'Villas'];
-  const agency = [
-    'Agency List',
-    'Agency Details',
-    'Agents List',
-    'Agent Details',
-  ];
   return (
-    <div className=" bg-color_dark text-gray-300 font-jost py-32">
+    <footer>
       <Container>
-        <div className="flex justify-between lg:flex-row flex-col lg:gap-0 gap-5">
-          <div className="space-y-3">
-            <img
-              src="https://resido-v2.smartdemowp.com/wp-content/uploads/2022/07/logo-light.svg"
-              alt=""
-              className="w-40"
-            />
-            <div className="pt-3 space-y-2">
-              <p>Collins Street West, Victoria 8007, Australia.</p>
-              <p>+1 246-345-0695</p>
-              <p>info@example.com</p>
+        <div className=" bg-black text-gray-300 font-jost  px-10 md:px-20 rounded-lg my-5">
+          <div className=" md:w-1/2 mx-auto mb-10 md:pt-20 p-10 ">
+            <div className="space-y-3 text-center">
+              <h1 className="text-2xl font-bold  text-white">
+                Lets's get Started on Something great
+              </h1>
+              <p>Join over 400+ startups already growing with Blogi</p>
             </div>
+            <div className="mt-5 flex justify-center items-center gap-2"></div>
           </div>
-          <div>
-            <h3 className="text-xl text-white font-semibold">Navigations</h3>
-            <ul className="pt-3 space-y-2 flex flex-col">
-              {navigations.map((nav, index) => {
-                return (
-                  <Link key={index} href={''} className="text-gray-300">
-                    {nav}
-                  </Link>
-                );
-              })}
-            </ul>
+          <div className=" grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-10 pb-20">
+            {footerRoutesData.map((data, index) => (
+              <ul key={"footer-route-section-" + (index + 1)} className="space-y-3">
+                <h4 className="text-[0.8rem] text-white font-medium">{data.name}</h4>
+                {data.routes.map((route, index2) => (
+                  <a
+                    href={route.path}
+                    key={"footer-route" + (index+1) * (index2 + 1)}
+                    className="text-gray-50 font-medium block"
+                  >
+                    {route.name}
+                  </a>
+                ))}
+              </ul>
+            ))}
           </div>
-
-          <div>
-            <h3 className="text-xl text-white font-semibold">The Highlights</h3>
-            <ul className="pt-3 space-y-2 flex flex-col">
-              {highlights.map((nav, index) => {
-                return (
-                  <Link href={''} key={index} className="text-gray-300">
-                    {nav}
-                  </Link>
-                );
-              })}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl text-white font-semibold">Navigations</h3>
-            <ul className="pt-3 space-y-2 flex flex-col">
-              {agency.map((nav, index) => {
-                return (
-                  <Link href={''} key={index} className="text-gray-300">
-                    {nav}
-                  </Link>
-                );
-              })}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl text-white font-semibold">Navigations</h3>
-            <ul className="pt-3 space-y-4 flex flex-col">
-              <div className="flex items-center gap-1 border p-3 rounded-md lg:1/2">
-                <div className="text-4xl text-color_primary">
-                  <FaGooglePlay></FaGooglePlay>
-                </div>
-                <div>
-                  <h1 className="text-2xl font-semibold">Google Play</h1>
-                  <p>Get it Now</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-1 border rounded-md p-3 ">
-                <div className="text-4xl text-color_primary">
-                  <FaApple></FaApple>
-                </div>
-                <div>
-                  <h1 className="text-2xl font-semibold">Play Store</h1>
-                  <p>Get it Now</p>
-                </div>
-              </div>
-            </ul>
+          <div className="pb-10 flex justify-between items-center">
+            <div className="flex items-center gap-2">
+              <img src="images/logo.png" alt="" className="size-12 bg-white  rounded-full" />
+              <h1 className=" text-2xl  font-bold font-jost text-white ">Blogi</h1>
+            </div>
+            <p className="text-[0.8rem] text-white">@ 2025 Blogi.All rights reserved.</p>
           </div>
         </div>
       </Container>
-    </div>
+    </footer>
   );
 };
 

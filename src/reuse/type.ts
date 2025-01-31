@@ -16,45 +16,46 @@ export interface IAddress {
 }
 
 export enum ESequence {
-  YEAR = 'Yearly',
-  MONTH = 'Monthly',
-  WEEK = 'Weekly',
-  HOUR = 'Hourly',
+  YEAR = "Yearly",
+  MONTH = "Monthly",
+  WEEK = "Weekly",
+  HOUR = "Hourly",
 }
 
 export enum EPropertyType {
-  HOUSE = 'House',
-  FLAT = 'Flat',
-  OFFICE = 'Office',
-  VILLA = 'Villa',
-  APARTMENT = 'Apartment',
+  HOUSE = "House",
+  FLAT = "Flat",
+  OFFICE = "Office",
+  VILLA = "Villa",
+  APARTMENT = "Apartment",
+  Land = "Land",
 }
 
 export enum ESortType {
-  ASC = 'asc',
-  DES = 'des',
+  ASC = "asc",
+  DES = "des",
 }
 
 export enum EPropertySortBy {
-  VIEWS = 'views',
-  price = 'price',
-  DATE_ADDED = 'date_added',
+  VIEWS = "views",
+  price = "price",
+  DATE_ADDED = "date_added",
 }
 
 export enum EPropertyListingType {
-  RENT = 'Rent',
-  SELL = 'Sell',
+  RENT = "Rent",
+  SELL = "Sell",
 }
 
 export enum ECurrency {
-  BDT = 'BDT',
-  USD = 'USD',
-  EUR = 'EUR',
+  // BDT = 'BDT',
+  USD = "USD",
+  EUR = "EUR",
 }
 
 export enum EUserRole {
-  MEMBER = 'Member',
-  AGENT = 'Agent',
-  ADMIN = 'Admin',
-  MODERATOR = 'Moderator',
+  MEMBER = "Member",
+  AGENT = "Agent",
+  ADMIN = "Admin",
+  MODERATOR = "Moderator",
 }

@@ -1,5 +1,5 @@
-import { IAddress, IName, IPhone } from '@/reuse/type';
-import { ISubscription } from './subscription.interface';
+import { IAddress, IName, IPhone } from "@/reuse/type";
+import { ISubscription } from "./subscription.interface";
 
 export interface IMember {
   user: string;

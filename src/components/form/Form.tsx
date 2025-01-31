@@ -1,11 +1,7 @@
-'use client';
-import React from 'react';
-import {
-  FieldValues,
-  FormProvider,
-  SubmitHandler,
-  useForm,
-} from 'react-hook-form';
+"use client";
+import React from "react";
+import { FieldValues, FormProvider, SubmitHandler, useForm } from "react-hook-form";
+import { BsXLg } from "react-icons/bs";
 
 type TFormConfig = {
   defaultValues?: Record<string, any>;
@@ -32,11 +28,11 @@ const Form = ({
   const formConfig: TFormConfig = {};
 
   if (defaultValues) {
-    formConfig['defaultValues'] = defaultValues;
+    formConfig["defaultValues"] = defaultValues;
   }
 
   if (resolver) {
-    formConfig['resolver'] = resolver;
+    formConfig["resolver"] = resolver;
   }
 
   const methods = useForm(formConfig);
@@ -50,11 +46,7 @@ const Form = ({
 
   return (
     <FormProvider {...methods}>
-      <form
-        id={id}
-        className={className}
-        onSubmit={methods.handleSubmit(submit)}
-      >
+      <form id={id} className={className} onSubmit={methods.handleSubmit(submit)}>
         {children}
       </form>
     </FormProvider>

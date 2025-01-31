@@ -1,7 +1,7 @@
-import React from 'react';
-import { BsFillCheckCircleFill } from 'react-icons/bs';
-import { GoCheckCircle } from 'react-icons/go';
-import { toast, ToasterProps } from 'sonner';
+import React from "react";
+import { BsFillCheckCircleFill } from "react-icons/bs";
+import { GoCheckCircle } from "react-icons/go";
+import { toast, ToasterProps } from "sonner";
 
 interface IProps {
   t: any;
@@ -17,9 +17,7 @@ function SuccessToast({ t, message }: IProps) {
       <span className="text-3xl text-green-400">
         <GoCheckCircle />
       </span>
-      <span className=" font-medium dark:text-dark_text_medium_color">
-        {message}
-      </span>
+      <span className=" font-medium dark:text-dark_text_medium_color">{message}</span>
     </div>
   );
 }
